@@ -14,7 +14,7 @@ body {
 	margin:0px;
 	padding: 0px;
 }
-#window {
+.magnify {
 	z-index: 20;
 	border: 3px solid #999;
 	position: relative;

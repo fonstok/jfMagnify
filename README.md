@@ -16,7 +16,7 @@ Just follow these steps to enable the magnify effect:
     ```html
     <script src="jquery.jfMagnify.1.0.js"></script>
     ```
-3. This is the default setup in the HTML, but class names can be custimized via arguments in the init function or a data attributes in the parent element.
+3. This is the default setup in the HTML, but class names can be customized via arguments in the init function or a data attributes in the parent element.
     ```html
     <div class="magnify">
 		<div class="magnify_glass"></div>
@@ -31,13 +31,18 @@ Just follow these steps to enable the magnify effect:
     $(".magnify").jfMagnify({});
     ```
     
-## Defaults and Options
+## CSS
+I wanted the structure to be as adaptable as possible, so the default class names can be changed as arguments in the init function or data attributes in the opening of the parent element. 
+* Use classes instead of id attributes so you can have more than one magnified effect on a page.
+* The parent element cannot be statically positioned. It needs to be positioned: relative, absolute, or fixed.
+* The magnifyGlass (default class name '.magnify_glass') element needs to be positioned absolute.
 
-* center: Centers the magnified area in the magnifed zone. The alternate is top, left. The default is true.
+## Defaults and Options
+* center: Centers the magnified area in the magnified zone. The alternate is top, left. The default is true.
 * scale: Scale can be changed. The default is 2x.
 * containment: Defines the magnify glass's containment area. The default is set to be its direct parent.
 * magnifyGlass : Defines the magnify glass element (the element you want draggable). The default is '.magnify_glass'.
-* magnifiedElement: Added class name to the cloned or magnified version of the element that has been magnified. This will allow you to select this element in css. The dafault is '.magnified_element'.
+* magnifiedElement: Added class name to the cloned or magnified version of the element that has been magnified. This will allow you to select this element in css. The default is '.magnified_element'.
 * magnifiedZone: Area where you want the magnified element to live. The default is set to '.magnify_glass'.
 * elementToMagnify: Identifies the element you want to magnify. The default is '.element_to_magnify'.
 
