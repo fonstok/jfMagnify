@@ -1,5 +1,5 @@
-# magnify
-jQuery plugin for a magnify glass effect 
+# jfMagnify
+jQuery plugin that creates a magnify glass effect. 
 
 # Set Up
 Just follow these steps to enable the magnify effect:
