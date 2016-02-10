@@ -59,7 +59,7 @@ $(".magnify").jfMagnify({
 Options can also be passed trough data attributes in the parent element
 ```html
 <div class="magnify" 
-	data-enter = "true"
+	data-center = "true"
 	data-scale ="2"
 	data-containment =".magnify"
 	data-magnify-glass = ".magnify_glass"
