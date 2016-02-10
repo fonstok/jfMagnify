@@ -23,7 +23,7 @@ Just follow these steps to enable the magnify effect:
 		<div class = "element_to_magnify">
 			<img src="image/IMG_2209.jpg" draggable="false"/>
 		</div>
-	</div>;
+	</div>
     ```
 
 4. Init the plugin by attaching it to a direct parent  of the element you want to magnify.
@@ -36,8 +36,8 @@ Just follow these steps to enable the magnify effect:
 * center: Centers the magnified area in the magnifed zone. The alternate is top, left. The default is true.
 * scale: Scale can be changed. The default is 2x.
 * containment: Defines the magnify glass's containment area. The default is set to be its direct parent.
-* magnifyGlass : Defines the class of the magnify element. The default is '.magnify_glass'.
-* magnifiedElement: Added class name to the cloned or magnified version of the element that has been magnified. The dafault is '.magnified_element'.
+* magnifyGlass : Defines the magnify glass element (the element you want draggable). The default is '.magnify_glass'.
+* magnifiedElement: Added class name to the cloned or magnified version of the element that has been magnified. This will allow you to select this element in css. The dafault is '.magnified_element'.
 * magnifiedZone: Area where you want the magnified element to live. The default is set to '.magnify_glass'.
 * elementToMagnify: Identifies the element you want to magnify. The default is '.element_to_magnify'.
 
