@@ -38,13 +38,13 @@ I wanted the structure to be as adaptable as possible, so the default class name
 * The magnifyGlass (default class name '.magnify_glass') element needs to be positioned absolute.
 
 ## Defaults and Options
-* _center:_ Centers the magnified area in the magnified zone. The alternate is top, left. The default is true.
-* _scale:_ Scale can be changed. The default is 2x.
-* _containment:_ Defines the magnify glass's containment area. The default is set to be its direct parent.
-* _magnifyGlass:_ Defines the magnify glass element (the element you want draggable). The default is '.magnify_glass'.
-* _magnifiedElement:_ Added class name to the cloned or magnified version of the element that has been magnified. This will allow you to select this element in css. The default is '.magnified_element'.
-* _magnifiedZone_: Area where you want the magnified element to live. The default is set to '.magnify_glass'.
-* _elementToMagnify_: Identifies the element you want to magnify. The default is '.element_to_magnify'.
+* __center:__ Centers the magnified area in the magnified zone. The alternate is top, left. The default is true.
+* __scale:__ Scale can be changed. The default is 2x.
+* __containment:__ Defines the magnify glass's containment area. The default is set to be its direct parent.
+* __magnifyGlass:__ Defines the magnify glass element (the element you want draggable). The default is '.magnify_glass'.
+* __magnifiedElement:__ Added class name to the cloned or magnified version of the element that has been magnified. This will allow you to select this element in css. The default is '.magnified_element'.
+* __magnifiedZone:__ Area where you want the magnified element to live. The default is set to '.magnify_glass'.
+* __elementToMagnify:__ Identifies the element you want to magnify. The default is '.element_to_magnify'.
 
 ### Options as Arguments
 Options can be passed as arguments through the init function.
