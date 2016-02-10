@@ -41,7 +41,8 @@ Just follow these steps to enable the magnify effect:
 * magnifiedZone: Area where you want the magnified element to live. The default are is set to '.magnify_glass'.
 * elementToMagnify: Identifies the element you want to magnify. The default class name is '.element_to_magnify'.
 
-## Options can be passed as arguments
+## Options as Arguments
+Oprions can be passed as arguments through the init function as an object.
 ```js
 $(".magnify").jfMagnify({
 	center: true,
@@ -54,7 +55,8 @@ $(".magnify").jfMagnify({
 });
 ```
 	
-## Options can olso be passed trough data attributes in the parent element
+## Options as Data Attributes
+Options can also be passed trough data attributes in the parent element
 ```html
 <div class="magnify" 
 	data-enter = "true"
