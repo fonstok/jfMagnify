@@ -7,16 +7,14 @@
         var dataatts = $element.data();
         var ratioW;
         var ratioH;
-        var windowCX = 0;
-        var windowCY = 0;
+        var maggedElCX = 0;
+        var maggedZoneCY = 0;
         var magGlassCX = 0;
         var magGlassCY = 0;
         var $magGlass;
         var $magnifiedElement;
         var $magZone;
         var $aToMag;
-        
-        
 
         var defaults = {
             center: true,
@@ -32,60 +30,56 @@
 
 
         plugin.init = function() {
-            plugin.settings = $.extend({}, defaults, options, $element.data());
+            plugin.settings = $.extend({}, defaults, options, dataatts);
             $(window).bind("resize", setUpMagnify);
+            console.log(plugin.settings.magnifiedZone);
             //$element.prepend('<div class="'+plugin.settings.magnifyGlass.slice(1)+'"></div>')
             $magGlass = $element.find(plugin.settings.magnifyGlass);
             $magnifiedZone =  $element.find(plugin.settings.magnifiedZone); 
             $aToMag = $element.find(plugin.settings.elementToMagnify);
+
             var cloned = $aToMag.clone(true);
             $magnifiedElement = $(cloned).removeAttr('id');
-            $magnifiedElement.addClass(plugin.settings.magnifiedElement.slice(1));
-            $magnifiedElement.css( {
-                'transform-origin': 'top left',
-                'transform': 'scale('+plugin.settings.scale+','+plugin.settings.scale+')', 
-                'top':'0' });
-            $magnifiedZone.append($magnifiedElement); 
+            $magnifiedElement.addClass(plugin.settings.magnifiedElement.slice(1));                
+            $magnifiedZone.append(cloned); 
+
+            $magGlass.draggable({
+                containment:plugin.settings.containment, 
+                drag:move,
+            });  
             
             setUpMagnify();
         }
 
         function setUpMagnify() {
-            
-            var aToMagW = $aToMag.get(0).getBoundingClientRect().width;
-            var magObjW = $magnifiedElement.get(0).getBoundingClientRect().width;
-            var aToMagH = $aToMag.get(0).getBoundingClientRect().height;
-            var magObjH = $magnifiedElement.get(0).getBoundingClientRect().height;
-
             $magnifiedElement.css( {
-                'width':aToMagW,
-                'height':aToMagH,
+                'transform-origin': 'top left',
+                'transform': 'scale('+plugin.settings.scale+','+plugin.settings.scale+')', 
+                'top':'0',
+                'width':$aToMag.get(0).getBoundingClientRect().width,
+                'height':$aToMag.get(0).getBoundingClientRect().height,
             });
+            var aToMagW = $aToMag.get(0).getBoundingClientRect().width;
+            var bigW = $magnifiedElement.get(0).getBoundingClientRect().width;
+            var aToMagH = $aToMag.get(0).getBoundingClientRect().height;
+            var bigH = $magnifiedElement.get(0).getBoundingClientRect().height;
 
-            $magGlass.css({top:0, left:0});
 
-            ratioW = getRatio(aToMagW, magObjW);
-            ratioH = getRatio(aToMagH, magObjH);
+            ratioW = getRatio(aToMagW, bigW);
+            ratioH = getRatio(aToMagH, bigH);
 
             if (plugin.settings.center){
-                windowCX = $magnifiedElement.parent().outerWidth()/2;
-                windowCY = $magnifiedElement.parent().outerHeight()/2;
+                maggedElCX = $magnifiedElement.parent().outerWidth()/2;
+                maggedZoneCY = $magnifiedElement.parent().outerHeight()/2;
                 magGlassCX = $magGlass.outerWidth()/2;
                 magGlassCY = $magGlass.outerWidth()/2;
-            }
-            if ($magGlass.draggable()){
-                $magGlass.draggable("destroy");
-            }
-            $magGlass.draggable({
-                containment:plugin.settings.containment, 
-                drag:move,
-            });  
-            function move(){
-                var scrollToX = flipNum(($magGlass.position().left + magGlassCX) / ratioW);
-                var scrollToY = flipNum(($magGlass.position().top + magGlassCY) / ratioH);
-                $magnifiedElement.css({'left':scrollToX + windowCX, 'top':scrollToY + windowCY});
-            }
+            }  
             move(); 
+        }
+        function move(){
+            var scrollToX = flipNum(($magGlass.position().left + magGlassCX) / ratioW);
+            var scrollToY = flipNum(($magGlass.position().top + magGlassCY) / ratioH);
+            $magnifiedElement.css({'left':scrollToX + maggedElCX, 'top':scrollToY + maggedZoneCY});
         }
 
         // delete the object
@@ -95,9 +89,14 @@
             $element.removeData('jfMagnify', plugin);
             plugin = null;
         } 
+        plugin.scaleMe = function(arg_scale){
+            plugin.settings.scale = arg_scale;
+            setUpMagnify();
+        }
 
         // math stuff
-        function getRatio(_num1, _num2){
+        function getRatio(_num1, _num2)
+        {
             var theNum;
             if (_num1 > _num2) {
                 theNum = _num2 / _num1;
@@ -106,7 +105,8 @@
             }
             return theNum;
         }
-        function flipNum(_num){
+        function flipNum(_num)
+        {
             var theNum = _num * -1;
             return theNum;
         } 
