@@ -27,7 +27,7 @@ Just follow these steps to enable the magnify effect:
     ```
 
 4. Init the plugin by attaching it to a direct parent  of the element you want to magnify.
-    ```html
+    ```js
     $(".magnify").jfMagnify();
     ```
     
@@ -66,5 +66,16 @@ Options can also be passed trough data attributes in the parent element
 	data-magnified-element = ".magnified_element"
 	data-magnified-zone =".magnify_glass"
 	data-element-to-magnify = ".element_to_mag" >
+```
+
+## Public functions
+There are few public functions that can be called.
+* destroy(): This deactivates the plugin
+* scaleMe(number): This can be called to increase or decrease the scale of the magnified element. 
+
+```js
+$(".magnify").data("jfMagnify").scaleMe(5);
+
+$(".magnify").data("jfMagnify").destroy();
 ```
 
