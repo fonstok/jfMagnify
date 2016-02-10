@@ -35,14 +35,14 @@ Just follow these steps to enable the magnify effect:
 
 * center: Centers the magnified area in the magnifed zone. The alternate is top, left. The default is true.
 * scale: Scale can be changed. The default is 2x.
-* containment: Cefines the magnify glass's containment area. The default is set to be its direct parent.
+* containment: Defines the magnify glass's containment area. The default is set to be its direct parent.
 * magnifyGlass : Defines the class of the magnify element. The default is '.magnify_glass'.
-* magnifiedElement: Added class name to the cloned or magnified version of the element that has been magnified. The dafault name is '.magnified_element'.
-* magnifiedZone: Area where you want the magnified element to live. The default are is set to '.magnify_glass'.
-* elementToMagnify: Identifies the element you want to magnify. The default class name is '.element_to_magnify'.
+* magnifiedElement: Added class name to the cloned or magnified version of the element that has been magnified. The dafault is '.magnified_element'.
+* magnifiedZone: Area where you want the magnified element to live. The default is set to '.magnify_glass'.
+* elementToMagnify: Identifies the element you want to magnify. The default is '.element_to_magnify'.
 
 ## Options as Arguments
-Oprions can be passed as arguments through the init function as an object.
+Options can be passed as arguments through the init function.
 ```js
 $(".magnify").jfMagnify({
 	center: true,
