@@ -58,11 +58,11 @@ $(".magnify").jfMagnify({
 ```html
 <div class="magnify" 
 	data-enter = "true"
-        data-scale ="2"
-        data-containment =".magnify"
-        data-magnify-glass = ".magnify_glass"
-        data-magnified-element = ".magnified_element"
-        data-magnified-zone =".magnify_glass"
-        data-element-to-magnify = ".element_to_mag" >
+	data-scale ="2"
+	data-containment =".magnify"
+	data-magnify-glass = ".magnify_glass"
+	data-magnified-element = ".magnified_element"
+	data-magnified-zone =".magnify_glass"
+	data-element-to-magnify = ".element_to_mag" >
 ```
 
