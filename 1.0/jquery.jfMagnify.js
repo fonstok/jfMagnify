@@ -1,3 +1,6 @@
+// written by Jon Fahnestock
+// use as you like
+// fonstok.com
 (function($) {
 
     $.jfMagnify = function(element, options) {
