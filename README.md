@@ -1,7 +1,7 @@
 # jfMagnify
 jQuery plugin that creates a magnify glass effect. 
 
-# Set Up
+## Set Up
 Just follow these steps to enable the magnify effect:
 
 1. Include jQuery and jQuery UI on your page.
@@ -31,7 +31,7 @@ Just follow these steps to enable the magnify effect:
     $(".magnify").jfMagnify({});
     ```
     
-# Defaults and Options
+## Defaults and Options
 
 * center: Centers the magnified area in the magnifed zone. The alternate is top, left. The default is true.
 * scale: Scale can be changed. The default is 2x.
@@ -41,7 +41,7 @@ Just follow these steps to enable the magnify effect:
 * magnifiedZone: Area where you want the magnified element to live. The default is set to '.magnify_glass'.
 * elementToMagnify: Identifies the element you want to magnify. The default is '.element_to_magnify'.
 
-## Options as Arguments
+### Options as Arguments
 Options can be passed as arguments through the init function.
 ```js
 $(".magnify").jfMagnify({
@@ -55,7 +55,7 @@ $(".magnify").jfMagnify({
 });
 ```
 	
-## Options as Data Attributes
+### Options as Data Attributes
 Options can also be passed trough data attributes in the parent element
 ```html
 <div class="magnify" 
