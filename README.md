@@ -16,14 +16,14 @@ Just follow these steps to enable the magnify effect:
     ```html
     <script src="jquery.jfMagnify.1.0.js"></script>
     ```
-3. Init the plugin by attaching it to a direct parent  of the element you want to magnify.
+3. This is the default setup in the HTML, but class names can be custimized via arguments in the init function or a data attributes in the parent element.
     ```html
     <div class="magnify">
-	    <div class="magnify_glass"></div>
-	    <div class = "element_to_magnify">
-		  <img src="image/IMG_2209.jpg" draggable="false"/>
-	</div>
-</div>;
+		<div class="magnify_glass"></div>
+		<div class = "element_to_magnify">
+			<img src="image/IMG_2209.jpg" draggable="false"/>
+		</div>
+	</div>;
     ```
 
 4. Init the plugin by attaching it to a direct parent  of the element you want to magnify.
