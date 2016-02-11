@@ -36,6 +36,18 @@ I wanted the structure to be as adaptable as possible, so the default class name
 * Use classes instead of id attributes so you can have more than one magnified effect on a page.
 * The parent element cannot be statically positioned. It needs to be positioned: relative, absolute, or fixed.
 * The magnifyGlass (default class name '.magnify_glass') element needs to be positioned absolute.
+* The magnified zone (default class name '.magnify_glass') is where the magnified element will appear. This element needs to be positioned absolute with the the overflow set to hidden.
+```css
+.magnify {
+	position: relative;
+	overflow: hidden;
+}
+.magnify_glass {
+	z-index: 100;
+	position: absolute;
+	overflow: hidden;
+}
+```
 
 ## Defaults and Options
 * __center:__ Centers the magnified area in the magnified zone. The alternate is top, left. The default is true.
