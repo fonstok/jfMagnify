@@ -91,8 +91,8 @@ There are few public functions that can be called.
 * scaleMe(number): This can be called to increase or decrease the scale of the magnified element. 
 
 ```js
-$(".magnify").data("jfMagnify").scaleMe(5);
-
 $(".magnify").data("jfMagnify").destroy();
+
+$(".magnify").data("jfMagnify").scaleMe(5);
 ```
 
