@@ -1,7 +1,7 @@
 # jfMagnify
 jQuery plugin that creates a magnify glass effect. 
 
-## Set Up
+## Script Set Up
 Just follow these steps to enable the magnify effect:
 
 1. Include jQuery and jQuery UI on your page.
@@ -16,27 +16,30 @@ Just follow these steps to enable the magnify effect:
     ```html
     <script src="jquery.jfMagnify.1.0.js"></script>
     ```
-3. This is the default setup in the HTML, but class names can be customized via arguments in the init function or a data attributes in the parent element.
-    ```html
-    <div class="magnify">
-		<div class="magnify_glass"></div>
-		<div class = "element_to_magnify">
-			<img src="image/IMG_2209.jpg" draggable="false"/>
-		</div>
-	</div>
-    ```
 
-4. Init the plugin by attaching it to a direct parent  of the element you want to magnify.
+3. Init the plugin by attaching it to a direct parent  of the element you want to magnify.
     ```js
     $(".magnify").jfMagnify({});
     ```
-    
+
+## HTML
+This is the default setup in the HTML, but class names can be customized via arguments in the init function or a data attributes in the parent element. __All of the elements should be parented into one element__ and that element should be the one attached to jfMagnify.
+   
+    ```html
+	<div class="magnify">
+		<div class="magnify_glass"></div>
+		<div class = "element_to_magnify">
+		<	img src="image/IMG_2209.jpg" draggable="false"/>
+		</div>
+	</div>
+    ```
+   
 ## CSS
 I wanted the structure to be as adaptable as possible, so the default class names can be changed as arguments in the init function or data attributes in the opening of the parent element. 
 * Use classes instead of id attributes so you can have more than one magnified effect on a page.
 * The parent element cannot be statically positioned. It needs to be positioned: relative, absolute, or fixed.
 * The magnifyGlass (default class name '.magnify_glass') element needs to be positioned absolute.
-* The magnified zone (default class name '.magnify_glass') is where the magnified element will appear. This element needs to be positioned absolute with the the overflow set to hidden.
+* The magnifiedZone (default class name '.magnify_glass') is where the magnified area will appear. This element needs to be positioned absolute with the the overflow set to hidden.
 ```css
 .magnify {
 	position: relative;
