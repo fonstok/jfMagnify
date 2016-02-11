@@ -35,7 +35,7 @@
         plugin.init = function() {
             plugin.settings = $.extend({}, defaults, options, dataatts);
             $(window).bind("resize", setUpMagnify);
-            console.log(plugin.settings.magnifiedZone);
+            console.log(plugin.settings.containment);
             //$element.prepend('<div class="'+plugin.settings.magnifyGlass.slice(1)+'"></div>')
             $magGlass = $element.find(plugin.settings.magnifyGlass);
             $magnifiedZone =  $element.find(plugin.settings.magnifiedZone); 
@@ -45,6 +45,7 @@
             $magnifiedElement = $(cloned).removeAttr('id');
             $magnifiedElement.addClass(plugin.settings.magnifiedElement.slice(1));                
             $magnifiedZone.append(cloned); 
+
 
             $magGlass.draggable({
                 containment:plugin.settings.containment, 
