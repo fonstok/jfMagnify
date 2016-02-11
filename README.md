@@ -1,5 +1,5 @@
 # jfMagnify
-jQuery plugin that creates a magnify glass effect. This plugin will magnify html content, not just images. It makes a clone of the elements then scales them to your specification placing them in any container element you want. 
+jQuery plugin that creates a magnify glass effect. This plugin will magnify html content, not just images. It does this by cloneing an identified element and its children, scaling it to your specification, and then appending to an identified container element. 
 
 ##Demo
 <p data-height="683" data-theme-id="0" data-slug-hash="eJQGJJ" data-default-tab="result" data-user="fonstok" class='codepen'>See the Pen <a href='http://codepen.io/fonstok/pen/eJQGJJ/'>Magnify</a> by Jon Fahnestock (<a href='http://codepen.io/fonstok'>@fonstok</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
