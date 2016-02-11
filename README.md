@@ -121,4 +121,7 @@ $(".magnify").data("jfMagnify").destroy();
 
 $(".magnify").data("jfMagnify").scaleMe(5);
 ```
+##Demo
+<p data-height="683" data-theme-id="0" data-slug-hash="eJQGJJ" data-default-tab="result" data-user="fonstok" class='codepen'>See the Pen <a href='http://codepen.io/fonstok/pen/eJQGJJ/'>Magnify</a> by Jon Fahnestock (<a href='http://codepen.io/fonstok'>@fonstok</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
