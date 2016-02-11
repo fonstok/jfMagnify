@@ -24,15 +24,17 @@ Just follow these steps to enable the magnify effect:
 
 ## HTML
 This is the default setup in the HTML, but class names can be customized via arguments in the init function or a data attributes in the parent element. __All of the elements should be parented into one element__ and that element should be the one attached to jfMagnify.
-   
-    ```html
-	<div class="magnify">
-		<div class="magnify_glass"></div>
-		<div class = "element_to_magnify">
-		<	img src="image/IMG_2209.jpg" draggable="false"/>
-		</div>
+
+
+
+```html
+<div class="magnify">
+	<div class="magnify_glass"></div>
+	<div class = "element_to_magnify">
+		<img src="image/IMG_2209.jpg" draggable="false"/>
 	</div>
-    ```
+</div>
+```
    
 ## CSS
 I wanted the structure to be as adaptable as possible, so the default class names can be changed as arguments in the init function or data attributes in the opening of the parent element. 
