@@ -14,7 +14,7 @@ Just follow these steps to enable the magnify effect:
 2. Include jfMagnify after jQuery UI and before its first use.
 
     ```html
-    <script src="jquery.jfMagnify.1.0.js"></script>
+    <script src="jquery.jfMagnify.js"></script>
     ```
 
 3. Init the plugin by attaching it to a direct parent  of the element you want to magnify.
@@ -45,19 +45,27 @@ I wanted the structure to be as adaptable as possible, so the default class name
 * The magnifyGlass (default class name '.magnify_glass') element needs to be positioned absolute.
 * The magnifiedZone (default class name '.magnify_glass') is where the magnified area will appear. This element needs to be positioned absolute with the the overflow set to hidden.
 * The element being magnified and the magnify glass need to have the same grid context starting at (0,0) so the elementToMagnify should be positioned at top left.
-* The element being magnified and the magnified version of that element share the same class ".element_to_magnify". 
+* The element being magnified and the magnified version of that element share a class (default class name '.element_to_magnify')'. 
 	* If you need to select only the element being magnified you can give it an id attribute.
-	* If you need to select the magnified version of the element, use its unique class ".magnified_element"   
+	* If you need to select the magnified version of the element, use its unique class (default class name '.magnified_element').   
 
 ```css
 .magnify {
 	position: relative;
-	overflow: hidden;
+	width: 900px;
+	height: 675px;
 }
 .magnify_glass {
 	z-index: 100;
 	position: absolute;
 	overflow: hidden;
+}
+.element_to_magnify {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
 #elementBeingMagnified {
 

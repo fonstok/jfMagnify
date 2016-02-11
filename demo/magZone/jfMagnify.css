@@ -20,7 +20,8 @@ body {
 	z-index: 20;
 	border: 3px solid #999;
 	position: relative;
-	width:80%;
+	width:900px;
+	height:675px;
 	margin:0px auto;
 }
 .magnify img {
@@ -28,7 +29,9 @@ body {
 }
 
 .element_to_magnify {
-	position: relative;
+	position: absolute;
+	top:0px;
+	left: 0px;
 	width: 100%;
 }
 .element_to_magnify img{
