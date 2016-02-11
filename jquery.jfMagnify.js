@@ -35,7 +35,6 @@
         plugin.init = function() {
             plugin.settings = $.extend({}, defaults, options, dataatts);
             $(window).bind("resize", setUpMagnify);
-            console.log(plugin.settings.containment);
             //$element.prepend('<div class="'+plugin.settings.magnifyGlass.slice(1)+'"></div>')
             $magGlass = $element.find(plugin.settings.magnifyGlass);
             $magnifiedZone =  $element.find(plugin.settings.magnifiedZone); 
