@@ -122,8 +122,10 @@ There are few public functions that can be called.
 
 ```js
 $(".magnify").data("jfMagnify").destroy();
-
 $(".magnify").data("jfMagnify").scaleMe(5);
 ```
+
+## Credits
+I used http://stefangabos.ro/jquery/jquery-plugin-boilerplate-revisited/ as a starting point for the plugin.
 
 
