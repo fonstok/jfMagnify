@@ -1,5 +1,5 @@
 # jfMagnify
-jQuery plugin that creates a magnify glass effect. This plugin will magnify html content, not just images. It does this by cloneing an identified element and its children, scaling it to your specification, and then appending to an identified container element. 
+jQuery plugin that creates a magnify glass effect. This plugin will magnify html content, not just images. It does this by cloneing an identified element and its children, scaling them to your specification, and then appending them to an identified container element. 
 
 ##Demo
 <p data-height="683" data-theme-id="0" data-slug-hash="eJQGJJ" data-default-tab="result" data-user="fonstok" class='codepen'>See the Pen <a href='http://codepen.io/fonstok/pen/eJQGJJ/'>Magnify</a> by Jon Fahnestock (<a href='http://codepen.io/fonstok'>@fonstok</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
@@ -14,7 +14,7 @@ Just follow these steps to enable the magnify effect:
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     ```
 
-2. Include jfMagnify after jQuery UI and before its first use.
+2. Download and include jfMagnify after jQuery UI and before its first use.
 
     ```html
     <script src="jquery.jfMagnify.js"></script>
@@ -27,8 +27,8 @@ Just follow these steps to enable the magnify effect:
 
 ## HTML
 This is the default setup in the HTML, but class names can be customized via arguments in the init function or a data attributes in the parent element. 
-* __All of the elements should be parented into one element__ and that element should be the one attached to jfMagnify.
-* The element being magnified and the magnify glass need to have the same grid context starting at (0,0), so it's easier if they have the same direct parent. 
+* __All of the elements should be parented into one element__ and the parent element should be the one attached to jfMagnify.
+* The element being magnified and the magnify glass need to have the same grid context starting at the same top and left (0,0), so it's easier if they have the same direct parent. 
 
 
 
@@ -43,14 +43,15 @@ This is the default setup in the HTML, but class names can be customized via arg
    
 ## CSS
 I wanted the structure to be as adaptable as possible, so the default class names can be changed as arguments in the init function or data attributes in the opening of the parent element. 
-* Use classes instead of id attributes so you can have more than one magnified effect on a page.
 * The parent element cannot be statically positioned. It needs to be positioned: relative, absolute, or fixed.
 * The magnifyGlass (default class name '.magnify_glass') element needs to be positioned absolute.
 * The magnifiedZone (default class name '.magnify_glass') is where the magnified area will appear. This element needs to be positioned absolute with the the overflow set to hidden.
-* The element being magnified and the magnify glass need to have the same grid context starting at (0,0) so the elementToMagnify should be positioned at top left.
+* The element being magnified and the magnify glass need to have the same grid context starting at (0,0) so the elementToMagnify should be positioned at top, left.
+* With this plugin it's a good practice to use __classes__ instead of id attributes because the magnified element and the element being magnified are cloned.
 * The element being magnified and the magnified version of that element share a class (default class name '.element_to_magnify'). 
-	* If you need to select only the element being magnified you can give it an id attribute.
-	* If you need to select the magnified version of the element, use its unique class (default class name '.magnified_element').   
+	* This is so it and its children appear identical to their counterparts.
+	* If you need to select only the __element being magnified__ you can add an id attribute to its opening. The plugin will remove the ID from the magnified version.
+	* If you need to select the __magnified version of the element__, it is given a unique class (default class name '.magnified_element') that can be selected.   
 
 ```css
 .magnify {
@@ -102,7 +103,7 @@ $(".magnify").jfMagnify({
 ```
 	
 ### Options as Data Attributes
-Options can also be passed trough data attributes in the parent element
+Options can also be passed through data attributes in opening of the parent element
 ```html
 <div class="magnify" 
 	data-center = "true"
