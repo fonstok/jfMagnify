@@ -43,10 +43,10 @@ This is the default setup in the HTML, but class names can be customized via arg
    
 ## CSS
 I wanted the structure to be as adaptable as possible, so the default class names can be changed as arguments in the init function or data attributes in the opening of the parent element. 
-* The parent element cannot be statically positioned. It needs to be positioned: relative, absolute, or fixed.
-* The magnifyGlass (default class name '.magnify_glass') element needs to be positioned absolute.
-* The magnifiedZone (default class name '.magnify_glass') is where the magnified area will appear. This element needs to be positioned absolute with the the overflow set to hidden.
-* The element being magnified and the magnify glass need to have the same grid context starting at (0,0) so the elementToMagnify should be positioned at top, left.
+* The __parent element__ cannot be statically positioned. It needs to be positioned: relative, absolute, or fixed.
+* The __magnifyGlass__ (default class name '.magnify_glass') element needs to be positioned absolute.
+* The __magnifiedZone__ (default class name '.magnify_glass') is where the magnified area will appear. This element needs to be positioned absolute with the the overflow set to hidden.
+* The element being magnified and the magnify glass need to have the same grid context starting at (0,0) so the __elementToMagnify__ should be positioned at top, left.
 * With this plugin it's a good practice to use __classes__ instead of id attributes because the magnified element and the element being magnified are cloned.
 * The element being magnified and the magnified version of that element share a class (default class name '.element_to_magnify'). 
 	* This is so it and its children appear identical to their counterparts.
