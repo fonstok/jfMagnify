@@ -22,7 +22,7 @@ Just follow these steps to enable the magnify effect:
 
 3. Init the plugin by attaching it to a direct parent  of the element you want to magnify.
     ```js
-    $(".magnify").jfMagnify({});
+    $(".magnify").jfMagnify();
     ```
 
 ## HTML
