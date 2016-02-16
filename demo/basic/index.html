@@ -10,6 +10,9 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".magnify").jfMagnify();
+			$('body').click(function(){
+				$(".magnify").data("jfMagnify").destroy();
+			});
 		});
 	</script>
 </head>
@@ -18,6 +21,7 @@
 	<div id="window" class="magnify">
 		<div class="magnify_glass"> </div>
 		<div class = "element_to_magnify">
+			<a target="_blank" href="https://github.com/fonstok/jfMagnify">https://github.com/fonstok/jfMagnify</a>
 			<img src="../images/IMG_2209.jpg" draggable="false"/>
 		</div>
 	</div>

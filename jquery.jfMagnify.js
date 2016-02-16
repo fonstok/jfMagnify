@@ -41,9 +41,8 @@
             $aToMag = $element.find(plugin.settings.elementToMagnify);
 
             var cloned = $aToMag.clone(true);
-            $magnifiedElement = $(cloned).removeAttr('id');
-            $magnifiedElement.addClass(plugin.settings.magnifiedElement.slice(1));                
-            $magnifiedZone.append(cloned); 
+            $magnifiedElement = $(cloned).removeAttr('id').addClass(plugin.settings.magnifiedElement.slice(1));                
+            $magnifiedZone.append($magnifiedElement); 
 
 
             $magGlass.draggable({
@@ -85,10 +84,11 @@
             $magnifiedElement.css({'left':scrollToX + maggedElCX, 'top':scrollToY + maggedZoneCY});
         }
 
-        // delete the object
+        // disable the plugin
         plugin.destroy = function(){
             $(window).unbind("resize", setUpMagnify);
             $magGlass.draggable( "destroy" );
+            $magnifiedElement.remove();
             $element.removeData('jfMagnify', plugin);
             plugin = null;
         } 

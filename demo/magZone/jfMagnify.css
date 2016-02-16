@@ -15,15 +15,17 @@ body {
 	padding: 0px;
 }
 
+
+
 .magnify {
 	top:100px;
 	z-index: 20;
-	border: 3px solid #999;
 	position: relative;
 	width:900px;
 	height:675px;
 	margin:0px auto;
 }
+
 .magnify img {
 	display:block;
 }
@@ -34,6 +36,16 @@ body {
 	left: 0px;
 	width: 100%;
 }
+.element_to_magnify  a {
+  display:block;
+  position:absolute;
+  top:80px;
+  right:80px;
+  background-color:rgba(200, 200, 200, .25);
+  padding:4px;
+  font-size:18px;
+  color:#fff;
+}
 .element_to_magnify img{
 	width: 100%;
 	height: auto;
@@ -43,7 +55,7 @@ body {
 }
 .mag_zone {
 	right: -100px;
-	top:-100px;
+	bottom:-100px;
 	width:300px;
 	height:300px;
 	position: absolute;

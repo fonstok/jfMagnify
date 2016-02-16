@@ -15,19 +15,30 @@ body {
 	padding: 0px;
 }
 .magnify {
+	z-index: 20;
 	border: 3px solid #999;
 	position: relative;
 	width:900px;
+  	height:640px;
 	margin:0px auto;
 	overflow: hidden;
 }
 .magnify img {
 	display:block;
 }
-
 .element_to_magnify {
 	position: relative;
 	width: 100%;
+}
+.element_to_magnify a {
+  display:block;
+  position:absolute;
+  top:80px;
+  right:80px;
+  background-color:rgba(200, 200, 200, .25);
+  padding:4px;
+  font-size:18px;
+  color:#fff;
 }
 .element_to_magnify img{
 	width: 100%;
