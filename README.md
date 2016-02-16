@@ -103,7 +103,7 @@ $(".magnify").jfMagnify({
 ```
 	
 ### Options as Data Attributes
-Options can also be passed through data attributes in opening of the parent element
+Options can also be passed through data attributes in opening of the parent element. __Notice that the data attributes use dashes instead of camel case__.
 ```html
 <div class="magnify" 
 	data-center = "true"
@@ -112,7 +112,7 @@ Options can also be passed through data attributes in opening of the parent elem
 	data-magnify-glass = ".magnify_glass"
 	data-magnified-element = ".magnified_element"
 	data-magnified-zone =".magnify_glass"
-	data-element-to-magnify = ".element_to_mag" >
+	data-element-to-magnify = ".element_to_magnify" >
 ```
 
 ## Public functions
