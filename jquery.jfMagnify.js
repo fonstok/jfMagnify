@@ -52,11 +52,17 @@
             
             setUpMagnify();
         }
-
+        /**/
         function setUpMagnify() {
             $magnifiedElement.css( {
                 'transform-origin': 'top left',
+                '-ms-transform-origin': 'top left',
+                '-webkit-transform-origin': 'top left',
+                '-moz-transform-origin': 'top left',
                 'transform': 'scale('+plugin.settings.scale+','+plugin.settings.scale+')', 
+                '-ms-transform': 'scale('+plugin.settings.scale+','+plugin.settings.scale+')', 
+                '-webkit-transform': 'scale('+plugin.settings.scale+','+plugin.settings.scale+')', 
+                '-moz-transform': 'scale('+plugin.settings.scale+','+plugin.settings.scale+')', 
                 'top':'0',
                 'width':$aToMag.get(0).getBoundingClientRect().width,
                 'height':$aToMag.get(0).getBoundingClientRect().height,

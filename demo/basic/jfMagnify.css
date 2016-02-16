@@ -4,11 +4,11 @@
 	margin-top: 0px;
 }
 body, html {
-  font-family:Sans-Serif;
 	width:100%;
 	height:100%;
 }
 body {
+	font-family:Sans-Serif;
 	padding: 0px;
 	background-color: #333;
 	color: #FFF;
@@ -33,6 +33,7 @@ body {
 	position: relative;
 	width:900px;
   	height:640px;
+  	overflow: hidden;
 }
 .element_to_magnify a {
   display:block;
