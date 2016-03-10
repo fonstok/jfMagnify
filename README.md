@@ -118,12 +118,36 @@ Options can also be passed through data attributes in opening of the parent elem
 ## Public functions
 There are few public functions that can be called.
 * destroy(): This deactivates the plugin
-* scaleMe(number): This can be called to increase or decrease the scale of the magnified element. 
-
 ```js
 $(".magnify").data("jfMagnify").destroy();
-$(".magnify").data("jfMagnify").scaleMe(5);
 ```
+* scaleMe(number): This can be called to increase or decrease the scale of the magnified element.
+```js
+var scaleNum = 2;
+$('.plus').click(function(){
+	scaleNum += .5;
+	if (scaleNum >=3) {
+		scaleNum = 3;
+	};
+	$(".magnify").data("jfMagnify").scaleMe(scaleNum);
+});
+```
+* update(): This can be called to update the movement of the magnified element. This is handy if you need to update on non user movement like on animate. 
+```js
+$('.magnify_glass').animate({
+	'top':'60%',
+	'left':'60%'
+	},{
+	duration: 1200, 
+	progress: function(){
+		$(".magnify").data("jfMagnify").update();
+	}, 
+	ease: "easeInQuint"
+});
+```
+
+
+
 
 ## Credits
 I used http://stefangabos.ro/jquery/jquery-plugin-boilerplate-revisited/ as a starting point for the plugin.
