@@ -103,7 +103,7 @@ $(".magnify").jfMagnify({
 ```
 	
 ### Options as Data Attributes
-Options can also be passed through data attributes in opening of the parent element. __Notice that the data attributes use dashes instead of camel case__.
+Options can also be passed through data attributes in the opening of the parent element. __Notice that the data attributes use dashes instead of camel case__.
 ```html
 <div class="magnify" 
 	data-center = "true"
@@ -117,11 +117,12 @@ Options can also be passed through data attributes in opening of the parent elem
 
 ## Public functions
 There are few public functions that can be called.
-* destroy(): This deactivates the plugin
+
+__destroy()__: This deactivates the plugin
 ```js
 $(".magnify").data("jfMagnify").destroy();
 ```
-* scaleMe(number): This can be called to increase or decrease the scale of the magnified element.
+__scaleMe(number)__: This can be called to increase or decrease the scale of the magnified element.
 ```js
 var scaleNum = 2;
 $('.plus').click(function(){
@@ -132,7 +133,7 @@ $('.plus').click(function(){
 	$(".magnify").data("jfMagnify").scaleMe(scaleNum);
 });
 ```
-* update(): This can be called to update the movement of the magnified element. This is handy if you need to update on non user movement like on animate. 
+__update()__: This can be called to update the movement of the magnified element. This is handy if you need to update on non user movement like on animate. 
 ```js
 $('.magnify_glass').animate({
 	'top':'60%',
