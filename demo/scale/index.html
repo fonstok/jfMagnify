@@ -17,14 +17,24 @@
 					scaleNum = 3;
 				};
 				$(".magnify").data("jfMagnify").scaleMe(scaleNum);
-			})
+			});
 			$('.minus').click(function(){
 				scaleNum -= .5;
 				if (scaleNum <=1) {
 					scaleNum = 1;
 				};
 				$(".magnify").data("jfMagnify").scaleMe(scaleNum);
-			})
+			});
+			$('.magnify_glass').animate({
+				'top':'60%',
+				'left':'60%'
+				},{
+				duration: 1200, 
+				progress: function(){
+					$(".magnify").data("jfMagnify").update();
+				}, 
+				ease: "easeInQuint"
+			});
 		});
 	</script>
 </head>

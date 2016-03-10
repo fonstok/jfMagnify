@@ -1,12 +1,12 @@
 // written by Jon Fahnestock
 // use as you like
 // fonstok.com
-(function($) {
 
+(function($) {
+    'use strict';
     $.jfMagnify = function(element, options) {
         var plugin = this;
-        var $element = $(element),
-             element = element;
+        var $element = $(element);
         var dataatts = $element.data();
         var ratioW;
         var ratioH;
@@ -16,7 +16,7 @@
         var magGlassCY = 0;
         var $magGlass;
         var $magnifiedElement;
-        var $magZone;
+        var $magnifiedZone;
         var $aToMag;
 
         var defaults = {
@@ -26,8 +26,8 @@
             magnifyGlass : '.magnify_glass',
             magnifiedElement: '.magnified_element',
             magnifiedZone:'.magnify_glass',
-            elementToMagnify : '.element_to_magnify',
-        }
+            elementToMagnify : '.element_to_magnify'
+        };
 
         plugin.settings = {};
 
@@ -47,11 +47,11 @@
 
             $magGlass.draggable({
                 containment:plugin.settings.containment, 
-                drag:move,
+                drag:plugin.update,
             });  
             
             setUpMagnify();
-        }
+        };
         /**/
         function setUpMagnify() {
             $magnifiedElement.css( {
@@ -82,13 +82,13 @@
                 magGlassCX = $magGlass.outerWidth()/2;
                 magGlassCY = $magGlass.outerWidth()/2;
             }  
-            move(); 
+            plugin.update(); 
         }
-        function move(){
+        plugin.update = function(){
             var scrollToX = flipNum(($magGlass.position().left + magGlassCX) / ratioW);
             var scrollToY = flipNum(($magGlass.position().top + magGlassCY) / ratioH);
             $magnifiedElement.css({'left':scrollToX + maggedElCX, 'top':scrollToY + maggedZoneCY});
-        }
+        };
 
         // disable the plugin
         plugin.destroy = function(){
@@ -97,11 +97,11 @@
             $magnifiedElement.remove();
             $element.removeData('jfMagnify', plugin);
             plugin = null;
-        } 
+        };
         plugin.scaleMe = function(arg_scale){
             plugin.settings.scale = arg_scale;
             setUpMagnify();
-        }
+        };
 
         // math stuff
         function getRatio(_num1, _num2)
@@ -120,14 +120,14 @@
             return theNum;
         } 
         plugin.init();
-    }
+    };
 
     $.fn.jfMagnify = function(options) {
         return this.each(function() {
-            if (undefined == $(this).data('jfMagnify')) {
+            if (undefined === $(this).data('jfMagnify')) {
                 var plugin = new $.jfMagnify(this, options);
                 $(this).data('jfMagnify', plugin);
             }
         });
-    }
+    };
 })(jQuery);
