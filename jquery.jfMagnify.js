@@ -50,6 +50,8 @@
                 drag:plugin.update,
             });  
             
+            $('img').attr('draggable', false);
+
             setUpMagnify();
         };
         /**/
