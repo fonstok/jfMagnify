@@ -31,7 +31,6 @@
 
         plugin.settings = {};
 
-
         plugin.init = function() {
             plugin.settings = $.extend({}, defaults, options, dataatts);
             $(window).bind("resize", setUpMagnify);
@@ -58,7 +57,7 @@
 
             setUpMagnify();
         };
-        /**/
+        //-------------------------- Set Up 
         function setUpMagnify() {
             $magnifiedElement.css( {
                 'transform-origin': 'top left',
@@ -90,13 +89,14 @@
             }  
             plugin.update(); 
         }
+        //-------------------------- update the movement
         plugin.update = function(){
             var scrollToX = flipNum(($magGlass.position().left + magGlassCX) / ratioW);
             var scrollToY = flipNum(($magGlass.position().top + magGlassCY) / ratioH);
             $magnifiedElement.css({'left':scrollToX + maggedElCX, 'top':scrollToY + maggedZoneCY});
         };
 
-        // disable the plugin
+        //-------------------------- disable the plugin
         plugin.destroy = function(){
             $(window).unbind("resize", setUpMagnify);
             $magGlass.draggable( "destroy" );
@@ -104,12 +104,13 @@
             $element.removeData('jfMagnify', plugin);
             plugin = null;
         };
+        //-------------------------- scale function
         plugin.scaleMe = function(arg_scale){
             plugin.settings.scale = arg_scale;
             setUpMagnify();
         };
 
-        // math stuff
+        //-------------------------- math stuff
         function getRatio(_num1, _num2)
         {
             var theNum;
