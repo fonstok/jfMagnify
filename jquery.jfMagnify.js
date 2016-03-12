@@ -35,7 +35,6 @@
         plugin.init = function() {
             plugin.settings = $.extend({}, defaults, options, dataatts);
             $(window).bind("resize", setUpMagnify);
-            //$element.prepend('<div class="'+plugin.settings.magnifyGlass.slice(1)+'"></div>')
             $magGlass = $element.find(plugin.settings.magnifyGlass);
             $magnifiedZone =  $element.find(plugin.settings.magnifiedZone); 
             $aToMag = $element.find(plugin.settings.elementToMagnify);
@@ -47,7 +46,12 @@
 
             $magGlass.draggable({
                 containment:plugin.settings.containment, 
-                drag:plugin.update,
+                drag:function(){
+                    plugin.update();
+                    if($magGlass.is(':animated') ) {
+                        $magGlass.stop();
+                    }
+                },
             });  
             
             $('img').attr('draggable', false);
