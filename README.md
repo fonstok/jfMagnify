@@ -25,6 +25,10 @@ Just follow these steps to enable the magnify effect:
     ```js
     $(".magnify").jfMagnify();
     ```
+    
+##Touch
+Touch functionality has been tested with the addition of jQuery UI Touch Punch <a href="https://github.com/furf/jquery-ui-touch-punch/">https://github.com/furf/jquery-ui-touch-punch/</a>
+
 
 ## HTML
 This is the default setup in the HTML, but class names can be customized via arguments in the init function or a data attributes in the parent element. 
