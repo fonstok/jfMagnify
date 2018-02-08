@@ -4,26 +4,38 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>JF Magnify</title>
 	<link href="jfMagnify.css" rel="stylesheet" type="text/css" />
-	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<script type="text/javascript" src="../../jquery.jfMagnify.min.js"></script>
+	
+</head>
+
+<body>
+	<div class="magnify" 
+	data-scale="8" 
+	data-magnified-zone=".mag_zone" 
+	data-containment=".drag_zone"
+	data-scale-glass="true">
+		<div class="mag_zone"></div>
+		<div class="drag_zone">
+		<div class="magnify_glass"></div>
+		
+		<div class = "element_to_magnify" >
+			<a target="_blank" href="https://github.com/fonstok/jfMagnify">https://github.com/fonstok/jfMagnify</a>
+			<img src="../images/IMG_2209.jpg" draggable="false"/>
+		</div>
+		</div>
+	</div>
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script
+	  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+	  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../../jquery.jfMagnify.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$(".magnify").jfMagnify();
 		});
 	</script>
-</head>
-
-<body>
-	<div id="window" class="magnify" data-scale="3" data-magnified-zone=".mag_zone" data-containment=".drag_zone">
-		<div class="mag_zone"></div>
-		
-		<div class="magnify_glass"></div>
-		<div class="drag_zone"></div>
-		<div class = "element_to_magnify" >
-			<a target="_blank" href="https://github.com/fonstok/jfMagnify">https://github.com/fonstok/jfMagnify</a>
-			<img src="../images/IMG_2209.jpg" draggable="false"/>
-		</div>
-	</div>
 </body>
 </html>

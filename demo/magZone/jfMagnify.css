@@ -1,38 +1,51 @@
 @charset "UTF-8";
 * {
-	box-sizing:border-box;
-	margin-top: 0px;
+    box-sizing:border-box;
+    margin-top: 0px;
 }
 body, html {
-	width:100%;
-	height:100%;
+    width:100%;
+    height:100%;
 }
 body {
-	font-family:Sans-Serif;
-	padding: 0px;
-	background-color: #333;
-	color: #FFF;
-	margin:0px;
-	padding: 0px;
+    font-family:Sans-Serif;
+    padding: 0px;
+    background-color: #333;
+    color: #FFF;
+    margin:0px;
+    padding: 0px;
 }
 .magnify {
-	top:100px;
-	z-index: 20;
-	position: relative;
-	width:900px;
-	height:675px;
-	margin:0px auto;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    z-index: 20;
+    background-color:blue;
+    position: absolute;
 }
-
+ 
 .magnify img {
-	display:block;
+    display:block;
 }
-
+ 
+.drag_zone {
+    position: absolute;
+    width: 600px;
+    height:400px;
+    bottom:10px;
+    right:10px;
+    z-index:800;
+    border:solid #fff 1px;  
+}
+ 
 .element_to_magnify {
-	position: relative;
-	width:900px;
-  	height:640px;
-  	overflow: hidden;
+    position: absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    overflow: hidden;
 }
 .element_to_magnify  a {
   display:block;
@@ -45,45 +58,33 @@ body {
   color:#fff;
 }
 .element_to_magnify img{
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 .magnified_element {
-	
+    /* so you can contol the magnified stuff*/
 }
+ 
 .mag_zone {
-	right: -100px;
-	bottom:-100px;
-	width:300px;
-	height:300px;
-	position: absolute;
-	border:solid 1px white;
-	z-index: 290;
-	overflow:hidden;
-	border: 4px solid #CCC;
-	border-radius: 50%;
-	background-color: #999;
+    position: absolute;
+    left: 0px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    z-index: 290;
+    overflow:hidden;
+    background-color: #999;
 }
-.drag_zone {
-	pointer-events: none;
-	background:none;
-	position: absolute;
-	width: 120%;
-	height:120%;
-	top:-10%;
-	left:-10%;
-/*	border:solid #fff 1px;*/	
-}
+ 
 .magnify_glass {
-	z-index: 300;
-	position: absolute;
-	background:none;
-	width: 200px;
-	height: 200px;
-	border: 4px solid #CCC;
-	border-radius: 50%;
-	background-color: rgba(200,200,200,.5);
-	cursor: move;
+    z-index: 300;
+    position: absolute;
+    background:none;
+    top:0px;
+    left:0px;
+    width: 200px;
+    height: 200px;
+    border: 4px solid #CCC;
+    background-color: rgba(200,200,200,.5);
+    cursor: move;
 }
-
-
