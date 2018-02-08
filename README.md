@@ -26,7 +26,7 @@ Just follow these steps to enable the magnify effect:
     $(".magnify").jfMagnify();
     ```
     
-##Touch
+## Touch
 Touch functionality has been tested with the addition of jQuery UI Touch Punch <a href="https://github.com/furf/jquery-ui-touch-punch/">https://github.com/furf/jquery-ui-touch-punch/</a>
 
 
