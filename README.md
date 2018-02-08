@@ -8,11 +8,11 @@ jQuery plugin that creates a magnify glass effect. This plugin will magnify html
 ## Script Set Up
 Just follow these steps to enable the magnify effect:
 
-1. Include jQuery and jQuery UI on your page.
+1. Include jQuery and jQuery UI on your page. Last tested with jQuery 3.3.1 and jQuery UI 1.12.1 
 
     ```html
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     ```
 
 2. Download and include jfMagnify after jQuery UI and before its first use.
@@ -89,6 +89,7 @@ I wanted the structure to be as adaptable as possible, so the default class name
 * __scale:__ Scale can be changed. The default is 2x.
 * __containment:__ Defines the magnify glass's containment area. The default is set to be its direct parent.
 * __magnifyGlass:__ Defines the magnify glass element (the element you want draggable). The default is '.magnify_glass'.
+* __scaleGlass:__ This will scale the magnify glass in relation to the magnifiedZone's width and hight. This is helpful when creating an effect demonstrated in the magZone demo.
 * __magnifiedElement:__ Added class name to the cloned or magnified version of the element that has been magnified. This will allow you to select this element in css. The default is '.magnified_element'.
 * __magnifiedZone:__ Area where you want the magnified element to live. The default is set to '.magnify_glass'.
 * __elementToMagnify:__ Identifies the element you want to magnify. The default is '.element_to_magnify'.
@@ -99,6 +100,7 @@ Options can be passed as arguments through the init function.
 $(".magnify").jfMagnify({
 	center: true,
 	scale:2,
+	scaleGlass:false,
 	containment:'magnify',
 	magnifyGlass : '.magnify_glass',
 	magnifiedElement: '.magnified_element',
@@ -115,6 +117,7 @@ Options can also be passed through data attributes in the opening of the parent 
 	data-scale ="2"
 	data-containment =".magnify"
 	data-magnify-glass = ".magnify_glass"
+	data-scale-glass = false;
 	data-magnified-element = ".magnified_element"
 	data-magnified-zone =".magnify_glass"
 	data-element-to-magnify = ".element_to_magnify" >

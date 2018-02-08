@@ -89,7 +89,7 @@
  
                 var magZoneW = $magnifiedZone.get(0).getBoundingClientRect().width;
                 var magZoneH = $magnifiedZone.get(0).getBoundingClientRect().height;
-                console.log(magZoneH);
+                //console.log(magZoneH);
                 $magGlass.css({
                     'width': magZoneW * ratioW,
                     'height': magZoneH * ratioH,
@@ -97,8 +97,8 @@
                  
                 // Scaled glass looks best when not centered. This tests to see if the user set centered, if not this changes the center default from true to false. 
                   
-                if (!(options != undefined && options.center != undefined) &&
-                    !(dataatts != undefined && dataatts.center != undefined)){
+                if (!(options !== undefined && options.center !== undefined) &&
+                    !(dataatts !== undefined && dataatts.center !== undefined)){
                     plugin.settings.center = false;
                 } 
             } 

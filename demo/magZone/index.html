@@ -13,14 +13,19 @@
 	data-magnified-zone=".mag_zone" 
 	data-containment=".drag_zone"
 	data-scale-glass="true">
-		<div class="mag_zone"></div>
-		<div class="drag_zone">
-		<div class="magnify_glass"></div>
-		
-		<div class = "element_to_magnify" >
-			<a target="_blank" href="https://github.com/fonstok/jfMagnify">https://github.com/fonstok/jfMagnify</a>
-			<img src="../images/IMG_2209.jpg" draggable="false"/>
+		<div class="mag_zone">
+			<!-- this is where the magnifyed elements get placed -->
 		</div>
+		<div class="drag_zone">
+			<div class="magnify_glass">
+				<!-- this is the object you drag around -->
+			</div>
+			
+			<div class = "element_to_magnify" >
+				<!-- anything in here gets copied and scaled to the mag_zone -->
+				<a target="_blank" href="https://github.com/fonstok/jfMagnify">https://github.com/fonstok/jfMagnify</a>
+				<img src="../images/IMG_2209.jpg" draggable="false"/>
+			</div>
 		</div>
 	</div>
 	<script
@@ -31,11 +36,9 @@
 	  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
 	  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
 	  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="../../jquery.jfMagnify.js"></script>
+	<script type="text/javascript" src="../../jquery.jfMagnify.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
 			$(".magnify").jfMagnify();
-		});
 	</script>
 </body>
 </html>
