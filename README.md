@@ -1,7 +1,7 @@
 # jfMagnify
 jQuery plugin that creates a magnify glass effect. This plugin will magnify html content, not just images. It does this by cloneing an identified element and its children, scaling them to your specification, and then appending them to an identified container element. 
 
-##Demos
+## Demos
 <p data-height="683" data-theme-id="0" data-slug-hash="eJQGJJ" data-default-tab="result" data-user="fonstok" class='codepen'>See the Pen <a href='http://codepen.io/fonstok/pen/eJQGJJ/'>Magnify</a> by Jon Fahnestock (<a href='http://codepen.io/fonstok'>@fonstok</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <p data-height="683" data-theme-id="0" data-slug-hash="eJQGJJ" data-default-tab="result" data-user="fonstok" class='codepen'>See the Pen <a href='http://codepen.io/fonstok/pen/reLmOJ'>Magnify Scale</a> by Jon Fahnestock (<a href='http://codepen.io/fonstok'>@fonstok</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <p data-height="683" data-theme-id="0" data-slug-hash="eJQGJJ" data-default-tab="result" data-user="fonstok" class='codepen'>See the Pen <a href='https://codepen.io/fonstok/pen/RQLwdW'>Magnify Mag Zone</a> by Jon Fahnestock (<a href='http://codepen.io/fonstok'>@fonstok</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
